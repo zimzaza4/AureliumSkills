@@ -1,0 +1,8 @@
+name: AureliumSkillsLegacy
+version: ${project.version}
+main: com.archyx.aureliumskillslegacy.AureliumSkillsLegacy
+depend: [SmartInvs]
+softdepend: [WorldGuard, PlaceholderAPI]
+authors: [Archyx]
+description: Advaned Skils, Stats, and Abilities plugin
+website: https://www.spigotmc.org/resources/aurelium-skills-advanced-skills-stats-abilities-and-more.81069/

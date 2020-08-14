@@ -1,0 +1,328 @@
+############################################################
+# +------------------------------------------------------+ #
+# |            Aurelium Skills Configuration             | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Version Pre-Alpha 1.1.0
+
+# Plugin made by Archy (DM Archy#2011 on discord for plugin support)
+data-save-period: 6000
+
+# Action Bar Options
+enable-action-bar: true
+
+# If action bar is enabled, these settings will be applied
+action-bar-update-period: 2
+
+enable-health-on-action-bar: true
+
+health-text-color: RED
+
+enable-mana-on-action-bar: true
+
+mana-text-color: AQUA
+
+# Color of text when gaining xp
+skill-xp-text-color: GOLD
+
+# Color of text in parenthesis showing xp progress
+xp-progress-text-color: GRAY
+
+prefix-bracket-color: DARK_GRAY
+
+prefix-text: "&bSkills"
+
+# Whether certain numbers should show up as roman numerals:
+enable-roman-numerals: true
+
+damage-holograms: true
+
+# Skill Options
+# Change the equation that calculates xp level requirements (XpRequired = Multiplier * (level - 2) ^ 2 + 100)
+# Default: 100
+skill-level-requirements-multiplier: 100
+
+check-block-replace: true
+blocked-check-block-replace-worlds:
+    - Example
+blocked-check-block-replace-regions:
+    - Example
+
+blocked-worlds:
+    - Example
+
+blocked-regions:
+    - spawn
+
+# Skill specific options
+farming:
+    enabled: true
+    types:
+        wheat: 2.0
+        potato: 2.5
+        carrot: 2.7
+        beetroot: 3.0
+        nether-wart: 3.0
+        pumpkin: 3.4
+        melon: 3.4
+foraging:
+    enabled: true
+    types:
+        oak-log: 4
+        spruce-log: 4
+        birch-log: 4
+        jungle-log: 4
+        acacia-log: 4
+        dark-oak-log: 4
+        oak-leaves: 0.4
+        spruce-leaves: 0.4
+        birch-leaves: 0.4
+        jungle-leaves: 0.4
+        acacia-leaves: 0.4
+        dark-oak-leaves: 0.4
+mining:
+    enabled: true
+    types:
+        stone: 0.2
+        cobblestone: 0.2
+        andesite: 0.2
+        diorite: 0.2
+        granite: 0.2
+        coal-ore: 1
+        quartz-ore: 1.8
+        iron-ore: 1.8
+        lapis-ore: 40.6
+        redstone-ore: 5.7
+        gold-ore: 17.8
+        diamond-ore: 47.3
+        emerald-ore: 142
+fishing:
+    enabled: true
+    types:
+        raw-fish: 25
+        raw-salmon: 60
+        clownfish: 750
+        pufferfish: 115
+        treasure: 1000
+        junk: 30
+        rare: 2000
+        epic: 5000
+excavation:
+    enabled: true
+    types:
+        dirt: 0.3
+        grass-block: 0.7
+        sand: 0.4
+        gravel: 1.5
+        mycelium: 3.7
+        clay: 2.4
+        soul-sand: 2.7
+archery:
+    enabled: true
+    types:
+        small-passive: 1
+        passive: 2
+        weak-hostile: 5
+        common-hostile: 7
+        uncommon-hostile: 10
+        strong-hostile: 17
+        stronger-hostile: 35
+        mini-boss: 100
+        boss: 7000
+defense:
+    enabled: true
+    max: 100.0
+    min: 0
+    types:
+        mob-damage: 1
+        player-damage: 2
+fighting:
+    enabled: true
+    types:
+        small-passive: 1
+        passive: 2
+        weak-hostile: 5
+        common-hostile: 7
+        uncommon-hostile: 10
+        strong-hostile: 17
+        stronger-hostile: 35
+        mini-boss: 100
+        boss: 7000
+endurance:
+    enabled: true
+    refresh-time-ticks: 
+    types:
+        walk-per-meter: 0.333
+        sprint-per-meter: 0.1
+        swim-per-meter: 1
+agility:
+    enabled: true
+    types:
+        jump-per-100: 10
+        fall-damage: 2
+alchemy:
+    enabled: true
+    types:
+        awkward: 10
+        regular: 15
+        extended: 25
+        upgraded: 25
+        splash: 35
+        lingering: 50
+enchanting:
+    enabled: true
+    types:
+        weapon-per-level: 2
+        armor-per-level: 2
+        tool-per-level: 2
+        book-per-level: 2
+sorcery:
+    enabled: true
+    types:
+healing:
+    enabled: true
+    types:
+        drink-regular: 10
+        drink-extended: 15
+        drink-upgraded: 15
+        splash-regular: 20
+        splash-extended: 25
+        splash-upgraded: 25
+forging:
+    enabled: true
+    types:
+        combine-books-per-level: 10
+        combine-weapon-per-level: 15
+        combine-armor-per-level: 20
+        combine-tool-per-level: 25
+
+# Stat Options
+health:
+    modifier: 0.5
+    health-scaling: true
+    hp-indicator-scaling: 5
+strength:
+    modifier: 0.1
+    hand-damage: true
+    bow-damage: true
+    display-damage-with-health-scaling: true
+toughness:
+    new-modifier: 1
+    reset-armor-attribute: true
+regeneration:
+    custom-regen-mechanics: false
+    base-regen: 1
+    saturated-modifier: 0.05
+    hunger-full-modifier: 0.025
+    hunger-almost-full-modifier: 0.025
+    custom-regen-options:
+        saturated-delay: 20
+        hunger-delay: 60
+    mana-modifier: 0.25
+luck:
+    modifier: 0.1
+    double-drop-modifier: 0.005
+    double-drop-percent-max: 100
+wisdom:
+    anvil-cost-modifier: 0.25
+    experience-modifier: 0.01
+
+# Ability Options
+abilities:
+    bountiful-harvest:
+        base: 10.0
+        per-level: 5.0
+    farmer:
+        base: 10.0
+        per-level: 10.0
+    scythe-master:
+        base: 3.0
+        per-level: 2.0
+    triple-harvest:
+        base: 5.0
+        per-level: 3.0
+    lumberjack:
+        base: 10.0
+        per-level: 5.0
+    forager:
+        base: 10.0
+        per-level: 10.0
+    axe-master:
+        base: 3.0
+        per-level: 2.0
+    shredder:
+        base: 3.0
+        per-level: 3.0
+    lucky-miner:
+        base: 3.0
+        per-level: 3.0
+    miner:
+        base: 10.0
+        per-level: 10.0
+    pick-master:
+        base: 3.0
+        per-level: 2.0
+    hardened-armor:
+        base: 3.0
+        per-level: 3.0
+    lucky-catch:
+        base: 10.0
+        per-level: 5.0
+    fisher:
+        base: 10.0
+        per-level: 10.0
+    treasure-hunter:
+        base: 1.0
+        per-level: 1.0
+    grappler:
+        base: 50.0
+        per-level: 100.0
+    epic-catch:
+        base: 0.4
+        per-level: 0.4
+    metal-detector:
+        base: 1.0
+        per-level: 0.5
+    excavator:
+        base: 10.0
+        per-level: 10.0
+    spade-master:
+        base: 3.0
+        per-level: 2.0
+    bigger-scoop:
+        base: 3.0
+        per-level: 3.0
+    lucky-spades:
+        base: 0.1
+        per-level: 0.1
+    crit-chance:
+        base: 5
+        per-level: 5
+    archer:
+        base: 10.0
+        per-level: 10.0
+    bow-master:
+        base: 3.0
+        per-level: 2.0
+    piercing:
+        base: 3.0
+        per-level: 3.0
+    stun:
+        base: 2.0
+        per-level: 1.0
+mana-abilities:
+    speed-mine:
+        base-value: 5.0
+        value-per-level: 5.0
+        cooldown: 200
+        cooldown-per-level: -5
+        mana-cost: 20
+        mana-cost-per-level: 20
+    treecapitator:
+        base-value: 5.0
+        value-per-level: 5.0
+        cooldown: 200
+        cooldown-per-level: -5
+        mana-cost: 20
+        mana-cost-per-level: 20

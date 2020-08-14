@@ -23,7 +23,7 @@ import java.util.UUID;
 
 public class AlchemyLeveler implements Listener {
 
-	private Plugin plugin;
+	private final Plugin plugin;
 	
 	public AlchemyLeveler(Plugin plugin) {
 		this.plugin = plugin;
@@ -32,7 +32,7 @@ public class AlchemyLeveler implements Listener {
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onBrew(BrewEvent event) {
 		if (Options.isEnabled(Skill.ALCHEMY)) {
-			if (event.isCancelled() == false) {
+			if (!event.isCancelled()) {
 				//Checks if in blocked world
 				if (AureliumSkills.worldManager.isInBlockedWorld(event.getBlock().getLocation())) {
 					return;
@@ -56,14 +56,11 @@ public class AlchemyLeveler implements Listener {
 							else if (mat.equals(Material.GLOWSTONE_DUST)) {
 								Leveler.addXp(p, s, Source.UPGRADED);
 							}
-							else if (mat.equals(XMaterial.NETHER_WART.parseMaterial())) {
+							else if (mat.equals(Material.NETHER_STALK)) {
 								Leveler.addXp(p, s, Source.AWKWARD);
 							}
-							else if (mat.equals(XMaterial.GUNPOWDER.parseMaterial())) {
+							else if (mat.equals(Material.SULPHUR)) {
 								Leveler.addXp(p, s, Source.SPLASH);
-							}
-							else if (mat.equals(XMaterial.DRAGON_BREATH.parseMaterial())) {
-								Leveler.addXp(p, s, Source.LINGERING);
 							}
 							else {
 								Leveler.addXp(p, s, Source.REGULAR);

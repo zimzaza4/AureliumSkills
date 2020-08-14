@@ -17,11 +17,10 @@ import org.bukkit.inventory.ItemStack;
 
 public class FishingLeveler implements Listener {
 
-	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onFish(PlayerFishEvent event) {
 		if (Options.isEnabled(Skill.FISHING)) {
-			if (event.isCancelled() == false) {
+			if (!event.isCancelled()) {
 				//Checks if in blocked world
 				if (AureliumSkills.worldManager.isInBlockedWorld(event.getPlayer().getLocation())) {
 					return;
@@ -37,21 +36,7 @@ public class FishingLeveler implements Listener {
 					Skill s = Skill.FISHING;
 					ItemStack item = ((Item) event.getCaught()).getItemStack();
 					Material mat = item.getType();
-					if (XMaterial.isNewVersion()) {
-						if (mat.equals(XMaterial.COD.parseMaterial())) {
-							Leveler.addXp(p, s, FishingAbilities.getModifiedXp(p, Source.RAW_FISH));
-						}
-						else if (mat.equals(XMaterial.SALMON.parseMaterial())) {
-							Leveler.addXp(p, s, FishingAbilities.getModifiedXp(p, Source.RAW_SALMON));
-						}
-						else if (mat.equals(XMaterial.TROPICAL_FISH.parseMaterial())) {
-							Leveler.addXp(p, s, FishingAbilities.getModifiedXp(p, Source.CLOWNFISH));
-						}
-						else if (mat.equals(XMaterial.PUFFERFISH.parseMaterial())) {
-							Leveler.addXp(p, s, FishingAbilities.getModifiedXp(p, Source.PUFFERFISH));
-						}
-					}
-					else if (mat.equals(XMaterial.COD.parseMaterial())) {
+					if (mat.equals(Material.RAW_FISH)) {
 						switch(item.getDurability()) {
 							case 0:
 								Leveler.addXp(p, s, FishingAbilities.getModifiedXp(p, Source.RAW_FISH));
@@ -72,7 +57,7 @@ public class FishingLeveler implements Listener {
 					}
 					else if (mat.equals(Material.BOWL) || mat.equals(Material.LEATHER) || mat.equals(Material.LEATHER_BOOTS) || mat.equals(Material.ROTTEN_FLESH)
 							|| mat.equals(Material.POTION) || mat.equals(Material.BONE) || mat.equals(Material.TRIPWIRE_HOOK) || mat.equals(Material.STICK) 
-							|| mat.equals(Material.STRING) || mat.equals(XMaterial.INK_SAC.parseMaterial()) || mat.equals(XMaterial.LILY_PAD.parseMaterial())) {
+							|| mat.equals(Material.STRING) || mat.equals(Material.INK_SACK) || mat.equals(Material.WATER_LILY)) {
 						Leveler.addXp(p, s, FishingAbilities.getModifiedXp(p, Source.JUNK));
 					}
 					else if (mat.equals(Material.FISHING_ROD)) {

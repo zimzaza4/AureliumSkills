@@ -74,7 +74,7 @@ public class FarmingLeveler implements Listener{
 					applyAbilities(p, b);
 
 				}
-				else if (mat.equals(XMaterial.MELON.parseMaterial())) {
+				else if (mat.equals(Material.MELON_BLOCK)) {
 					if (Options.checkBlockReplace) {
 						if (b.hasMetadata("skillsPlaced")) {
 							return;
@@ -112,11 +112,6 @@ public class FarmingLeveler implements Listener{
 	}
 
 	public static boolean isSugarCane(Material material) {
-		if (XMaterial.isNewVersion()) {
-			return material.equals(Material.SUGAR_CANE);
-		}
-		else {
-			return material.equals(Material.valueOf("SUGAR_CANE_BLOCK"));
-		}
+		return material.equals(Material.SUGAR_CANE_BLOCK);
 	}
 }

@@ -31,7 +31,7 @@ public enum Skill {
 			new Ability[] {Ability.LUCKY_MINER, Ability.MINER, Ability.PICK_MASTER, Ability.SPEED_MINE, Ability.HARDENED_ARMOR}),
 	FISHING(Stat.LUCK, Stat.HEALTH, "Catch fish to earn Fishing XP", Material.FISHING_ROD, 
 			new Ability[] {Ability.LUCKY_CATCH, Ability.FISHER, Ability.TREASURE_HUNTER, Ability.GRAPPLER, Ability.EPIC_CATCH}),
-	EXCAVATION(Stat.REGENERATION, Stat.LUCK, "Dig with a shovel to earn Excavation XP", XMaterial.GOLDEN_SHOVEL.parseMaterial(),
+	EXCAVATION(Stat.REGENERATION, Stat.LUCK, "Dig with a shovel to earn Excavation XP", Material.GOLD_SPADE,
 			new Ability[] {Ability.METAL_DETECTOR, Ability.EXCAVATOR, Ability.SPADE_MASTER, Ability.BIGGER_SCOOP, Ability.LUCKY_SPADES}),
 	ARCHERY(Stat.LUCK, Stat.STRENGTH, "Shoot mobs and players with a bow to earn Archery XP", Material.BOW,
 			new Ability[] {Ability.CRIT_CHANCE, Ability.ARCHER, Ability.BOW_MASTER, Ability.PIERCING, Ability.STUN}),
@@ -45,7 +45,7 @@ public enum Skill {
 			new Ability[] {Ability.JUMPER}),
 	ALCHEMY(Stat.HEALTH, Stat.WISDOM, "Brew potions to earn Alchemy XP", Material.BREWING_STAND_ITEM,
 			new Ability[] {Ability.BREWER}),
-	ENCHANTING(Stat.WISDOM, Stat.LUCK, "Enchant items and books to earn Enchanting XP", XMaterial.ENCHANTING_TABLE.parseMaterial(),
+	ENCHANTING(Stat.WISDOM, Stat.LUCK, "Enchant items and books to earn Enchanting XP", Material.ENCHANTMENT_TABLE,
 			new Ability[] {Ability.ENCHANTER}),
 	SORCERY(Stat.STRENGTH, Stat.WISDOM, "Cast spells to earn Sorcery XP", Material.BLAZE_ROD,
 			new Ability[] {Ability.SORCERER}),
@@ -54,14 +54,14 @@ public enum Skill {
 	FORGING(Stat.TOUGHNESS, Stat.WISDOM, "Combine and apply books in an anvil to earn Forging XP", Material.ANVIL,
 			new Ability[] {Ability.FORGER});
 	
-	private Stat primaryStat;
-	private Stat secondaryStat;
-	private String description;
-	private String name;
-	private Material material;
-	private Ability[] abilities;
+	private final Stat primaryStat;
+	private final Stat secondaryStat;
+	private final String description;
+	private final String name;
+	private final Material material;
+	private final Ability[] abilities;
 	
-	private Skill(Stat primaryStat, Stat secondaryStat, String description, Material material, Ability[] abilities) {
+	Skill(Stat primaryStat, Stat secondaryStat, String description, Material material, Ability[] abilities) {
 		this.name = this.toString().toLowerCase();
 		this.primaryStat = primaryStat;
 		this.secondaryStat = secondaryStat;

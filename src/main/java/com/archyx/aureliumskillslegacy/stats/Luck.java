@@ -15,7 +15,7 @@ import com.archyx.aureliumskillslegacy.skills.SkillLoader;
 
 public class Luck implements Listener {
 
-	private Random r = new Random();
+	private final Random r = new Random();
 
 	@EventHandler
 	public void onBlockBreak(BlockBreakEvent event) {
@@ -26,8 +26,7 @@ public class Luck implements Listener {
 						PlayerStat stat = SkillLoader.playerStats.get(event.getPlayer().getUniqueId());
 						Material mat = event.getBlock().getType();
 						if (mat.equals(Material.STONE) || mat.equals(Material.COBBLESTONE) || mat.equals(Material.SAND) || mat.equals(Material.GRAVEL)
-								|| mat.equals(Material.DIRT) || mat.equals(XMaterial.GRASS_BLOCK.parseMaterial()) || mat.equals(XMaterial.ANDESITE.parseMaterial()) || mat.equals(XMaterial.DIORITE.parseMaterial())
-								|| mat.equals(XMaterial.GRANITE.parseMaterial())) {
+								|| mat.equals(Material.DIRT) || mat.equals(Material.GRASS)) {
 							if ((double) stat.getStatLevel(Stat.LUCK) * Options.getDoubleOption(Setting.DOUBLE_DROP_MODIFIER) < Options.getDoubleOption(Setting.DOUBLE_DROP_PERCENT_MAX) / 100) {
 								if (r.nextDouble() < ((double) stat.getStatLevel(Stat.LUCK) * Options.getDoubleOption(Setting.DOUBLE_DROP_MODIFIER))) {
 									for (ItemStack item : event.getBlock().getDrops()) {

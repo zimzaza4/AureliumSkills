@@ -1,8 +1,24 @@
 name: AureliumSkillsLegacy
-version: ${project.version}
+version: Alpha 1.3.0
 main: com.archyx.aureliumskillslegacy.AureliumSkillsLegacy
 depend: [SmartInvs]
 softdepend: [WorldGuard, PlaceholderAPI]
 authors: [Archyx]
 description: Advaned Skils, Stats, and Abilities plugin
 website: https://www.spigotmc.org/resources/aurelium-skills-advanced-skills-stats-abilities-and-more.81069/
+
+permissions:
+  aureliumskills.skill.setlevel:
+    default: op
+  aureliumskills.ability.setlevel:
+    default: op
+  aureliumskills.reload:
+    default: op
+  aureliumskills.lang:
+    default: op
+  aureliumskills.xp.add:
+    default: op
+  aureliumskills.top:
+    default: true
+  aureliumskills.skill.reset:
+    default: op

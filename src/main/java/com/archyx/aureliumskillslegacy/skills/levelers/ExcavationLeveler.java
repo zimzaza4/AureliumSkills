@@ -43,7 +43,7 @@ public class ExcavationLeveler implements Listener{
 				else if (mat.equals(Material.SAND)) {
 					Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.SAND));
 				}
-				else if (mat.equals(XMaterial.GRASS_BLOCK.parseMaterial())) {
+				else if (mat.equals(Material.GRASS)) {
 					Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.GRASS_BLOCK));
 				}
 				else if (mat.equals(Material.GRAVEL)) {
@@ -55,7 +55,7 @@ public class ExcavationLeveler implements Listener{
 				else if (mat.equals(Material.SOUL_SAND)) {
 					Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.SOUL_SAND));
 				}
-				else if (mat.equals(XMaterial.MYCELIUM.parseMaterial())) {
+				else if (mat.equals(Material.MYCEL)) {
 					Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.MYCELIUM));
 				}
 			}

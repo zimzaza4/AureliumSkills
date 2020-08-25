@@ -62,7 +62,7 @@ public class LootTableManager {
 			lootTables.put(lootTableName, lootTable);
 			lootTablesLoaded++;
 		}
-		Bukkit.getLogger().info(AureliumSkills.tag + ChatColor.AQUA + "Loaded " + ChatColor.GOLD + itemsLoaded + ChatColor.AQUA + " items in " + ChatColor.GOLD + lootTablesLoaded + ChatColor.AQUA + " loot tables.");
+		Bukkit.getConsoleSender().sendMessage(AureliumSkills.tag + ChatColor.AQUA + "Loaded " + ChatColor.GOLD + itemsLoaded + ChatColor.AQUA + " items in " + ChatColor.GOLD + lootTablesLoaded + ChatColor.AQUA + " loot tables.");
 	}
 	
 	public LootTable getLootTable(String name) {

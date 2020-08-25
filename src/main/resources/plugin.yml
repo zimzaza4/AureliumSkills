@@ -1,7 +1,6 @@
 name: AureliumSkillsLegacy
 version: Alpha 1.3.0
-main: com.archyx.aureliumskillslegacy.AureliumSkillsLegacy
-depend: [SmartInvs]
+main: com.archyx.aureliumskillslegacy.AureliumSkills
 softdepend: [WorldGuard, PlaceholderAPI]
 authors: [Archyx]
 description: Advaned Skils, Stats, and Abilities plugin

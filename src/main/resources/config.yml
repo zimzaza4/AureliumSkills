@@ -81,6 +81,7 @@ foraging:
         jungle-leaves: 0.4
         acacia-leaves: 0.4
         dark-oak-leaves: 0.4
+        sugar-cane: 1.7
 mining:
     enabled: true
     types:
@@ -97,6 +98,13 @@ mining:
         gold-ore: 17.8
         diamond-ore: 47.3
         emerald-ore: 142
+        terracotta: 0.5
+        white-terracotta: 0.5
+        orange-terracotta: 0.5
+        yellow-terracotta: 0.5
+        light-gray-terracotta: 0.5
+        brown-terracotta: 0.5
+        red-terracotta: 0.5
 fishing:
     enabled: true
     types:
@@ -130,6 +138,7 @@ archery:
         stronger-hostile: 35
         mini-boss: 100
         boss: 7000
+        player: 50
 defense:
     enabled: true
     max: 100.0
@@ -149,6 +158,7 @@ fighting:
         stronger-hostile: 35
         mini-boss: 100
         boss: 7000
+        player: 50
 endurance:
     enabled: true
     refresh-time-ticks: 

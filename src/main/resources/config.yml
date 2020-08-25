@@ -66,6 +66,7 @@ farming:
         nether-wart: 3.0
         pumpkin: 3.4
         melon: 3.4
+        sugar-cane: 1.7
 foraging:
     enabled: true
     types:
@@ -81,7 +82,6 @@ foraging:
         jungle-leaves: 0.4
         acacia-leaves: 0.4
         dark-oak-leaves: 0.4
-        sugar-cane: 1.7
 mining:
     enabled: true
     types:
@@ -105,6 +105,9 @@ mining:
         light-gray-terracotta: 0.5
         brown-terracotta: 0.5
         red-terracotta: 0.5
+        netherrack: 0.1
+        end_stone: 0.5
+        obsidian: 10.0
 fishing:
     enabled: true
     types:
@@ -126,6 +129,9 @@ excavation:
         mycelium: 3.7
         clay: 2.4
         soul-sand: 2.7
+        coarse-dirt: 2.3
+        podzol: 2.5
+        red-sand: 0.7
 archery:
     enabled: true
     types:

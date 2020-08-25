@@ -17,7 +17,7 @@ public class EnchantingLeveler implements Listener {
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onEnchant(EnchantItemEvent event) {
 		if (Options.isEnabled(Skill.ENCHANTING)) {
-			if (event.isCancelled() == false) {
+			if (!event.isCancelled()) {
 				//Checks if in blocked world
 				if (AureliumSkills.worldManager.isInBlockedWorld(event.getEnchantBlock().getLocation())) {
 					return;

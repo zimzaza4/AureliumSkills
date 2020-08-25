@@ -23,7 +23,7 @@ public class Health implements Listener {
 	private static void setHealth(Player player) {
 		//Calculates the amount of health to add
 		double modifier = ((double) SkillLoader.playerStats.get(player.getUniqueId()).getStatLevel(Stat.HEALTH)) * Options.getDoubleOption(Setting.HEALTH_MODIFIER);
-		player.resetMaxHealth();
+		player.setMaxHealth(20);
 		player.setMaxHealth(player.getMaxHealth() + modifier);
 		//Applies health scaling
 		if (Options.getBooleanOption(Setting.HEALTH_SCALING)) {

@@ -6,6 +6,7 @@ import com.archyx.aureliumskillslegacy.skills.abilities.ExcavationAbilities;
 import com.archyx.aureliumskillslegacy.AureliumSkills;
 import com.archyx.aureliumskillslegacy.skills.Source;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -36,12 +37,29 @@ public class ExcavationLeveler implements Listener{
 				}
 				Skill s = Skill.EXCAVATION;
 				Player p = event.getPlayer();
+				Block b = event.getBlock();
 				Material mat = event.getBlock().getType();
 				if (mat.equals(Material.DIRT)) {
-					Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.DIRT));
+					switch (b.getData()) {
+						case 0:
+							Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.DIRT));
+							break;
+						case 1:
+							Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.COARSE_DIRT));
+							break;
+						case 2:
+							Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.PODZOL));
+					}
 				}
 				else if (mat.equals(Material.SAND)) {
-					Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.SAND));
+					switch (b.getData()) {
+						case 0:
+							Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.SAND));
+							break;
+						case 1:
+							Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.RED_SAND));
+							break;
+					}
 				}
 				else if (mat.equals(Material.GRASS)) {
 					Leveler.addXp(p, s, ExcavationAbilities.getModifiedXp(p, Source.GRASS_BLOCK));

@@ -47,6 +47,10 @@
                             <pattern>com.cryptomorin.xseries</pattern>
                             <shadedPattern>com.archyx.aureliumskills.xseries</shadedPattern>
                         </relocation>
+                        <repository>
+                            <id>jitpack.io</id>
+                            <url>https://jitpack.io</url>
+                        </repository>
                         <relocation>
                             <pattern>org.bstats</pattern>
                             <shadedPattern>com.archyx.aureliumskills.bstats</shadedPattern>
